@@ -1,0 +1,39 @@
+name: check-build
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  regenerated-html:
+    name: committed HTML matches the build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Rebuild site
+        run: python3 scripts/build.py
+
+      - name: Fail if generated HTML differs
+        shell: bash
+        run: |
+          set -eu
+          paths=(index.html)
+          if [ -d entries ] || [ -n "$(git ls-files -- entries)" ]; then
+            paths+=(entries)
+          fi
+          if ! git diff --exit-code -- "${paths[@]}"; then
+            echo "生成された HTML がコミットと一致しません。python3 scripts/build.py を実行し、index.html と entries/*.html をコミットしてください。"
+            git --no-pager diff -- "${paths[@]}" || true
+            exit 1
+          fi
+          untracked="$(git ls-files --others --exclude-standard -- "${paths[@]}")"
+          if [ -n "$untracked" ]; then
+            echo "ビルドが未コミットの HTML を作りました。これらもコミットしてください。"
+            printf '%s\n' "$untracked"
+            exit 1
+          fi
