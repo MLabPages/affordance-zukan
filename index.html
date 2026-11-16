@@ -50,14 +50,34 @@
 <section class="collection" aria-labelledby="collection-heading">
   <div class="collection-head">
     <h2 id="collection-heading">収録</h2>
+    <p class="collection-note">全1回・新しい順</p>
   </div>
-<div class="empty">
-  <div class="empty-inner">
-    <p class="empty-label">第1回</p>
-    <p class="empty-title">まだ、一枚もありません</p>
-    <p class="empty-copy">第1回は、2026年11月16日（月）の20:00（日本時間）ごろに加わります。それから先は、毎日ひとつの好例が、この一覧に並びます。</p>
+<div class="collection-tools">
+  <p class="filters-label" id="filters-label">分野</p>
+  <div class="filters" role="group" aria-labelledby="filters-label">
+    <button type="button" class="chip is-active" data-filter="all" aria-pressed="true">すべて</button>
+    <button type="button" class="chip" data-filter="扉と開口" aria-pressed="false">扉と開口</button>
   </div>
 </div>
+<noscript><p class="noscript-note">JavaScript が無効でも、全件はこの下に出ます。分野の絞り込みだけ動きません。</p></noscript>
+<p id="filter-empty" class="filter-empty" hidden>この分野の回は、まだありません。</p>
+  <ul class="cards">
+      <li class="card" data-category="扉と開口">
+        <a class="card-link" href="entries/001.html">
+          <div class="card-media">
+            <img src="images/001-1.png" alt="" width="1200" height="960" loading="eager">
+          </div>
+          <div class="card-body">
+            <p class="card-meta">
+              <span class="card-no">第1回</span>
+              <time datetime="2026-11-16">2026年11月16日（月）</time>
+            </p>
+            <p class="card-title">押し板と縦の取っ手（扉の「押す」「引く」）</p>
+            <p class="card-category">扉と開口</p>
+          </div>
+        </a>
+      </li>
+    </ul>
 </section>
 </div>
 </main>
@@ -67,5 +87,6 @@
     <p><a href="https://github.com/MLabPages/affordance-zukan/blob/main/README.md">追加の手順</a></p>
 </div>
 </footer>
+<script src="site.js"></script>
 </body>
 </html>
