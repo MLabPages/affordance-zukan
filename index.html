@@ -50,12 +50,13 @@
 <section class="collection" aria-labelledby="collection-heading">
   <div class="collection-head">
     <h2 id="collection-heading">収録</h2>
-    <p class="collection-note">全2回・新しい順</p>
+    <p class="collection-note">全3回・新しい順</p>
   </div>
 <div class="collection-tools">
   <p class="filters-label" id="filters-label">分野</p>
   <div class="filters" role="group" aria-labelledby="filters-label">
     <button type="button" class="chip is-active" data-filter="all" aria-pressed="true">すべて</button>
+    <button type="button" class="chip" data-filter="Web・アプリのUI" aria-pressed="false">Web・アプリのUI</button>
     <button type="button" class="chip" data-filter="家電と操作部" aria-pressed="false">家電と操作部</button>
     <button type="button" class="chip" data-filter="扉と開口" aria-pressed="false">扉と開口</button>
   </div>
@@ -63,6 +64,21 @@
 <noscript><p class="noscript-note">JavaScript が無効でも、全件はこの下に出ます。分野の絞り込みだけ動きません。</p></noscript>
 <p id="filter-empty" class="filter-empty" hidden>この分野の回は、まだありません。</p>
   <ul class="cards">
+      <li class="card" data-category="Web・アプリのUI">
+        <a class="card-link" href="entries/003.html">
+          <div class="card-media">
+            <img src="images/003-1.png" alt="" width="1200" height="960" loading="eager">
+          </div>
+          <div class="card-body">
+            <p class="card-meta">
+              <span class="card-no">第3回</span>
+              <time datetime="2026-11-18">2026年11月18日（水）</time>
+            </p>
+            <p class="card-title">押せそうに見えるボタン、見えないボタン（画面の手がかり）</p>
+            <p class="card-category">Web・アプリのUI</p>
+          </div>
+        </a>
+      </li>
       <li class="card" data-category="家電と操作部">
         <a class="card-link" href="entries/002.html">
           <div class="card-media">
@@ -81,7 +97,7 @@
       <li class="card" data-category="扉と開口">
         <a class="card-link" href="entries/001.html">
           <div class="card-media">
-            <img src="images/001-1.png" alt="" width="1200" height="960" loading="eager">
+            <img src="images/001-1.png" alt="" width="1200" height="960" loading="lazy" decoding="async">
           </div>
           <div class="card-body">
             <p class="card-meta">
