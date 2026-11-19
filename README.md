@@ -1,6 +1,6 @@
 # アフォーダンス図鑑
 
-毎日ひとつのアフォーダンスの好例を、図とともに残す静的サイトです。配信するのはリポジトリのルートにある HTML と CSS で、GitHub Pages はビルドしません。`data/entries.json` に一回ぶん足し、`python3 scripts/build.py` で HTML を作り直し、生成物ごと `main` にコミットします。
+毎日ひとつのアフォーダンスの好例を、図とともに残す静的サイトです。Cloudflare Pages が `main` ブランチのルートにある生成済みの HTML を、ビルドなしで配信します。`data/entries.json` に一回ぶん足し、`python3 scripts/build.py` で HTML を作り直し、生成物ごと `main` にコミットします。
 
 いま収録は 0 件です。第1回の予定日は 2026-11-16、公開時刻は日本時間の 20:00 ごろです。予定日を迎えても、この手順でオブジェクトを足すまでは空のままにします。下の「形式の見本」は説明用で、ファイルには入れません。
 
@@ -19,6 +19,7 @@
 | `styles.css` | 手書きのスタイル。ビルドでは変わらない |
 | `site.js` | 一覧の分野チップ。手書き |
 | `favicon.svg` | サイトアイコン |
+| `404.html` | 存在しない URL にアクセスしたときの案内 |
 | `.nojekyll` | GitHub Pages の Jekyll を止める |
 | `.github/workflows/check-build.yml` | コミット済み HTML と、ビルドし直した HTML が一致するか検査する |
 
@@ -197,9 +198,9 @@ python3 -m http.server
 
 ## 公開
 
-GitHub Pages は、ブランチ `main` のルート `/` から配信する。Settings → Pages → Build and deployment → Deploy from a branch → Branch: `main`、Folder: `/ (root)`。
+GitHub リポジトリを Cloudflare Pages に接続する。本番ブランチを `main`、フレームワークを「なし」、ビルドコマンドを空欄、ビルド出力ディレクトリを `.` にする。ルートディレクトリは既定のリポジトリルートを使う。プロジェクトの「カスタムドメイン」に `affordance-zukan.mlabcraft.com` を追加する。
 
-公開 URL は `https://mlabpages.github.io/affordance-zukan/` になる。リンクは相対パスなので、このサブパスのままで動く。
+公開 URL は <https://affordance-zukan.mlabcraft.com/>。
 
 ## 既存の回を直す、消す
 
