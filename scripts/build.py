@@ -465,8 +465,8 @@ def footer() -> str:
     return "\n".join([
         '<footer class="colophon">',
         '<div class="wrap">',
-        "    <p>記録は一日ひとつ。追加はおおよそ毎夜20:00（日本時間）です。</p>",
-        f'    <p><a href="{esc(README_URL)}">追加の手順</a></p>',
+        "    <p>文章は出典をもとにAIが学習用に要約したものです。詳しくは各回の出典へ。</p>",
+        "    <p>図はAIが書いたコードで描いています。</p>",
         "</div>",
         "</footer>",
     ])
