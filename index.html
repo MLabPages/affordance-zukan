@@ -50,12 +50,13 @@
 <section class="collection" aria-labelledby="collection-heading">
   <div class="collection-head">
     <h2 id="collection-heading">収録</h2>
-    <p class="collection-note">全9回・新しい順</p>
+    <p class="collection-note">全10回・新しい順</p>
   </div>
 <div class="collection-tools">
   <p class="filters-label" id="filters-label">分野</p>
   <div class="filters" role="group" aria-labelledby="filters-label">
     <button type="button" class="chip is-active" data-filter="all" aria-pressed="true">すべて</button>
+    <button type="button" class="chip" data-filter="おもちゃと子ども向け" aria-pressed="false">おもちゃと子ども向け</button>
     <button type="button" class="chip" data-filter="車・乗り物" aria-pressed="false">車・乗り物</button>
     <button type="button" class="chip" data-filter="公共空間" aria-pressed="false">公共空間</button>
     <button type="button" class="chip" data-filter="ゲーム" aria-pressed="false">ゲーム</button>
@@ -70,6 +71,21 @@
 <noscript><p class="noscript-note">JavaScript が無効でも、全件はこの下に出ます。分野の絞り込みだけ動きません。</p></noscript>
 <p id="filter-empty" class="filter-empty" hidden>この分野の回は、まだありません。</p>
   <ul class="cards">
+      <li class="card" data-category="おもちゃと子ども向け">
+        <a class="card-link" href="entries/010.html">
+          <div class="card-media">
+            <img src="images/010-1.png" alt="" width="1200" height="960" loading="eager">
+          </div>
+          <div class="card-body">
+            <p class="card-meta">
+              <span class="card-no">第10回</span>
+              <time datetime="2026-11-25">2026年11月25日（水）</time>
+            </p>
+            <p class="card-title">部品の形が組み方を決めるレゴのバイク（説明書のいらない組み立て）</p>
+            <p class="card-category">おもちゃと子ども向け</p>
+          </div>
+        </a>
+      </li>
       <li class="card" data-category="車・乗り物">
         <a class="card-link" href="entries/009.html">
           <div class="card-media">
@@ -88,7 +104,7 @@
       <li class="card" data-category="公共空間">
         <a class="card-link" href="entries/008.html">
           <div class="card-media">
-            <img src="images/008-1.png" alt="" width="1200" height="960" loading="eager">
+            <img src="images/008-1.png" alt="" width="1200" height="960" loading="lazy" decoding="async">
           </div>
           <div class="card-body">
             <p class="card-meta">
