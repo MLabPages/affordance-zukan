@@ -390,6 +390,55 @@
           "caption": "画面にぴったり収まると「ここで終わり」に見え、次のカードが少しのぞくと続きに気づける（模式図）。"
         }
       ]
+    },
+    {
+      "number": 12,
+      "date": "2026-11-27",
+      "title": "「どちら向き？」のUSB-Aと、裏表のないUSB-C（向きを読む必要をなくす）",
+      "category": "家電・機器（コネクタ）",
+      "sections": {
+        "invite": "USB-Aのプラグは、平たい長方形の金属の口です。外から見ると上下がほぼ同じ形ですが、中の端子の板が片側に寄っているため、差さる向きは1つだけです。\n\n穴と形が合えば差しこめること自体は、プラグと受け口の関係で決まる性質で、ギブソンのいうアフォーダンスにあたります。一方、「どちら向きか」を知らせるのは手がかり（シグニファイア）の仕事です。USB 2.0の仕様書は、プラグの上面にUSBのマークを刻み、差しこむときにそのマークが見えるように受け口を向けると定めています。見分けやすく、向きを合わせやすくするための目印だと書かれています。\n\nただ、この目印は小さく、意味を知っている人にしか読めません。向きを決めている片寄りの板（制約）も、差しこもうとしてぶつかるまで見えません。ノーマンは、形で行為をしぼる物理的な制約は、行為の前に見て読み取れるときにいちばんよく効く、と述べています。USB-Aは、制約はあるのに、それが見えない例です。",
+        "contrast": "USBの開発を率いたインテルのアジェイ・バット（Ajay Bhatt）さんは、裏表どちらでも差せる形も一度は検討したと話しています。2015年のPCWorldの取材では、裏返せるようにするには線が倍になり、費用も倍になる、当時はそれが受け入れられなかったと説明し、「振り返れば、しくじった（in hindsight we blew it）」と語りました。2019年のNPRの取材でも、いちばんの不満は向きがあることだと認めています。\n\n答えの1つが、2014年に仕様が完成したUSB Type-C（USB-C）です。USB-IFは主な特長として、プラグの向きもケーブルの向きも問わないこと（reversible plug orientation and cable direction）を挙げています。向きを示す目印を足すのではなく、向きを読む必要そのものをなくしたわけです。ノーマンも円筒形の電池について、どちら向きでも働く接点にして向きを無関係にするか、一方向にしか入らない形にするかを提案し、古い規格が広く出回っていて改められない状態を「レガシー問題」と呼びました。USB-CもUSB-Aの口とは直接つながらず、仕様では変換ケーブルやアダプタが用意されています。",
+        "use": "スライドや授業で「見分けにくい2択」を見つけたら、目印を足す前に「どちらでもよくできないか」を考えてみてください。授業では、USB-AとUSB-Cを並べて「どちらが向きを教えてくれる？」と聞くと、手がかりを足す設計と、手がかりをいらなくする設計の違いを話せます。研究サイトやフォームでも、全角・半角やハイフンの有無のような書き方の違いを受け取る側で吸収すると、注意書きを1つ減らせます。"
+      },
+      "sources": [
+        {
+          "title": "USB Implementers Forum (2000). Universal Serial Bus Specification Revision 2.0.（6.5.1 USB Icon Location：プラグ上面のUSBマークと向き合わせ）",
+          "url": "https://www.usb.org/document-library/usb-20-specification"
+        },
+        {
+          "title": "USB 3.0 Promoter Group (2014, August 12). USB 3.0 Promoter Group Announces USB Type-C Connector Ready for Production（プレスリリース、Internet Archive 保存版）.",
+          "url": "https://web.archive.org/web/20140814072125/http://www.usb.org/press/USB_Type-C_Specification_Announcement_Final.pdf"
+        },
+        {
+          "title": "USB Implementers Forum. USB Type-C® Cable and Connector Specification.",
+          "url": "https://usb.org/usb-type-cr-cable-and-connector-specification"
+        },
+        {
+          "title": "Mah Ung, G. (2015, November 16). Happy birthday USB: The standard turns 20, and proud inventor Ajay Bhatt tells all. PCWorld.",
+          "url": "https://www.pcworld.com/article/424209/happy-birthday-usb-the-standard-turns-20-and-proud-inventor-ajay-bhatt-tells-all.html"
+        },
+        {
+          "title": "Axelrod, J. (2019, June 21). Ever Plugged A USB In Wrong? Of Course You Have. Here's Why. NPR.",
+          "url": "https://www.npr.org/2019/06/21/734451600/ever-plugged-a-usb-in-wrong-of-course-you-have-heres-why"
+        },
+        {
+          "title": "Norman, D. A. (2013). The Design of Everyday Things: Revised and Expanded Edition. Basic Books.（第4章 Knowing What to Do: Constraints, Discoverability, and Feedback　物理的制約と電池の向き、レガシー問題）",
+          "url": "https://jnd.org/books/the-design-of-everyday-things-revised-and-expanded-edition/"
+        }
+      ],
+      "images": [
+        {
+          "src": "images/012-1.png",
+          "alt": "USB-Aのしくみの模式図。上段は横から見たプラグで、黒い本体の上面にUSBマークがあり、青い矢印と「① 小さな刻印：上面のUSBマーク＝向きの目印。知っている人にしか読めない」。中段はプラグの口を正面から見た図で、金属の枠の下半分に、オレンジの枠で囲んだ黒い端子の板と金色の端子。オレンジの矢印と「② 片側に寄った板：中の端子板が向きを決める制約。外からはほぼ見えない」、図の下に「外の形は上下ほぼ同じ（板は下）」。下段は受け口の正面で、上半分に赤い枠で囲んだ灰色の板。赤い矢印と「③ 受け口も片寄り：逆向きだと板どうしがぶつかる。入れてみるまでわからない」、図の下に「受け口の正面（板は上）」。いちばん下に「しくみを表した模式図（寸法・形は正確ではありません）」。",
+          "caption": "USB-Aは外の形が上下ほぼ同じで、向きを決める中の板は外から見えにくく、手がかりは上面の小さな刻印だけ（模式図）。"
+        },
+        {
+          "src": "images/012-2.png",
+          "alt": "左右2つの枠の比較図。左は赤い枠で、札「USB-A：当たりは2つに1つ」。受け口の正面図が2つあり、左は灰色の板（受け口）の下にオレンジの板（プラグ）が収まって緑のチェック「表向き」、右はオレンジの板が灰色の板に重なって赤いバツ「裏向き：板がぶつかる」。下に「向きを読む手がかりが要る → 小さな刻印だけではまちがえやすい」。右は緑の枠で、札「USB-C：裏表なし」。角の丸い受け口の中央に灰色の板があり、緑の輪（プラグ）が囲む図が2つ並び、どちらも緑のチェックで「表向き」「裏向き」。下に「どちら向きでも差さる → 向きを読む必要そのものがない」。いちばん下に「しくみを表した模式図。実在の製品の写真ではありません」。",
+          "caption": "USB-Aは2つに1つの向きを当てる必要があり、USB-Cはどちら向きでも差さるので向きを読まなくてよい（模式図）。"
+        }
+      ]
     }
   ]
 }
